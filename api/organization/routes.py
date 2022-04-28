@@ -1,7 +1,6 @@
 from typing import Optional
 from fastapi import APIRouter
 
-from models import Organization
 from .schemas import OrganizationSchema
 
 rt_organizations = APIRouter(
@@ -14,6 +13,7 @@ rt_organizations = APIRouter(
 
 @rt_organizations.get("/", response_model=Optional[list[OrganizationSchema]] or Optional[OrganizationSchema], response_model_exclude={"id"})
 async def get_organizations(name: str = None, edrpou_code: str = None):
+    from models import Organization
     if all((name, edrpou_code)):
         return {"error": "Choose one between organization_id, edrpou_code"}
     if name:

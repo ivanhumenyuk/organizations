@@ -1,7 +1,7 @@
 from typing import Optional, List
 from sqlalchemy import Column, Integer, String, select
 
-from app import Base, async_session
+from db_engine import Base, async_session
 
 
 class Organization(Base):
