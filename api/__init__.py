@@ -1,3 +1,5 @@
-from fastapi import FastAPI
+from api.organization.routes import rt_organizations
 
-app = FastAPI()
+routers = [
+    rt_organizations
+]
