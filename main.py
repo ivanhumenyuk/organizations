@@ -1,7 +1,8 @@
 import uvicorn
-from api.config import dev_config
+
+from orgs.config import dev_config
 
 if __name__ == "__main__":
     uvicorn.run(
-        "app:create_app",  host=dev_config.get("LOCALHOST"), port=dev_config.get("LOCALHOST_PORT")
+        "orgs:create_app",  host=dev_config.get("LOCALHOST"), port=dev_config.get("LOCALHOST_PORT")
     )
