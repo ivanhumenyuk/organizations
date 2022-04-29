@@ -7,7 +7,7 @@ Clone this repository to your local repository:<br/>
 ```
 https://github.com/ivanhumenyuk/organizations-back.git
 ```
-First of all you have to install virtual environment:
+First of all you have to install virtual environment, go to project root via cmd and execute:
 ```
 python3.9 -m venv env
 ```
@@ -15,10 +15,15 @@ then
 ```
 source env/bin/activate
 ```
-First of all, you have to install all dependencies. Just write 
+then you have to install all dependencies. Just write 
 in your console:
 ```
 pip install requirements.txt
+```
+
+To allow and run alembic migrations type and run in a console:
+```
+alembic upgrade head
 ```
 ### Postgres installation
 First go to https://www.postgresql.org/download/ and install postgresql >= 13.0 version. Change the user to postgres:
